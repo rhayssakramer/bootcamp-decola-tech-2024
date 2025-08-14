@@ -1,18 +1,18 @@
-## 📱 Sistema de Celulares em .NET - Programação Orientada a Objetos
+# 🚗 Sistema de Estacionamento em .NET - Fundamentos
 
-Este repositório corresponde ao Desafio #02 da [Bootcamp Decola Tech 2024](https://web.dio.me/track/decola-tech-avanade-net-developer) para aplicar conhecimentos de **Programação Orientada a Objetos em** `C#`.
-O objetivo é criar um sistema de console em .NET 6.0 que modele diferentes tipos de celulares, utilizando herança, abstração e polimorfismo.
+Este repositório corresponde ao Desafio #01 da [Bootcamp Decola Tech 2024](https://web.dio.me/track/decola-tech-avanade-net-developer) para criar um sistema de console em `.NET` e `C#` para gerenciar veículos estacionados, aplicando conceitos básicos de programação, como classes, listas, métodos e interação com o usuário.
 
-### Índice
+## Índice
 - [Introdução]()
 - [Tecnologias Utilizadas]()
 - [Desafio de Projeto]()
 - [Objetivos]()
   - [x] Pré-requisitos
   - [x] Estrutura do Projeto
-  - [x] Regras e Validações  
-  - [x] Especificações de Conteúdo  
-  - [x] Especificações Técnicas  
+  - [x] Regras e Validações
+  - [x] Especificações de Conteúdo
+  - [x] Especificações Técnicas
+- [Planejamento do Projeto]()
 - [Passo a Passo]()
 - [Modelo do Diagrama]()
 - [Execução do Projeto]()
@@ -20,7 +20,7 @@ O objetivo é criar um sistema de console em .NET 6.0 que modele diferentes tipo
 - [Autora]()
 
 ### ▶️ Introdução
-O desafio consiste em criar um sistema de console utilizando .NET e C# para treinar os conhecimentos adquiridos no módulo de `POO`. Na proposta do desafio o desenvoledor é responsável por modelar um sistema que trabalha com celulares que represente um modelo abstrato de celular, com comportamentos específicos para Nokia e iPhone. Para isso, foi preciso fazer o modelo abstrato de celular, que disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+O sistema de estacionamento foi desenvolvido em `C#` e `.NET` como primeiro desafio da trilha de Fundamentos. Ele permite cadastrar, remover e listar veículos estacionados, além de calcular o valor devido com base no tempo de permanência. Na proposta desafio o desenvoledor foi contratado para construir um Sistema para um Estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
 
 ### 💻 Tecnologias Utilizadas
 
@@ -29,16 +29,22 @@ O desafio consiste em criar um sistema de console utilizando .NET e C# para trei
 | <img height="40" src="https://skillicons.dev/icons?i=cs"> <img height="40" src="https://skillicons.dev/icons?i=dotnet"> <img height="40" src="https://skillicons.dev/icons?i=nodejs"> | <img height="40" src="https://skillicons.dev/icons?i=vscode">
 
 ### 🎯 Desafio de Projeto
-- Criar uma classe abstrata `Smartphone` com atributos e métodos básicos.
-- Criar duas classes filhas (`Nokia` e `Iphone`) que herdam da classe base.
-- Implementar métodos sobrescritos para instalação de aplicativos, respeitando as diferenças de cada marca.
+- Criar uma classe Estacionamento com atributos e métodos para gerenciar veículos.
+- Implementar menu interativo no console.
+- Calcular o valor de estadia com base em preço inicial e valor por hora.
 
 ### 🛠️ Objetivos
-O objetivo é aplicar os conceitos de POO aprendidos no módulo:
-- Abstração
-- Herança
-- Polimorfismo
-- Encapsulamento
+O objetivo foi aplicar fundamentos básicos de programação:
+- Classes e objetos
+- Listas (List<T>)
+- Métodos
+- Estruturas condicionais e de repetição
+
+Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
+1. Cadastrar veículo
+2. Remover veículo
+3. Listar veículos
+4. Encerrar
 
 **📌 Pré-requisitos**
 1. Ter o [.NET 6.0](https://dotnet.microsoft.com/pt-br/download/dotnet/6.0) instalado.
@@ -47,68 +53,72 @@ O objetivo é aplicar os conceitos de POO aprendidos no módulo:
 
 **📂 Estrutura do Projeto**
 ```
-SistemaCelulares/
+Estacionamento/
 │
 ├── 📁 Models
-│   ├── Smartphone.cs
-│   ├── Nokia.cs
-│   └── Iphone.cs
+│   ├── Cliente.cs
+│   ├── Veiculo.cs
+│   └── Estacionamento.cs
 │
 ├── 📁 Diagrams
-│   └── diagrama-sistema-celulares.png
+│   └── diagrama_classe_estacionamento.png
 │
 ├── 📄 Program.cs
-├── 📄 SistemaCelulares.csproj
+├── 📄 Estacionamento.csproj
 └── 📄 README.md
-```  
+```
 
 **📜 Regras e Validações**
-1. `Smartphone` deve ser **abstrata** e não pode ser instanciada servindo apenas como modelo.
-```
-Smartphone: `numero`  (string), `modelo`  (string), `imei` (string) e `memoria` (int). Sendo modelo, IMEI e memoria `privadas` e numero `pública`
-```
-2. `Nokia` e `Iphone` devem herdar de `Smartphone`.
-```
-Iphone: numero, modelo, imei e memoria com herança da classe smartphone.
-Nokia: numero, modelo, imei e memoria com herança da classe smartphone.
-```
-3. O método `InstalarAplicativo` deve ser sobrescrito nas classes filhas, pois ambos possuem diferentes maneiras de instalar um aplicativo.    
+1. Indique um nome para seu negócio.
+2. Sua composição de estacionamento (cadastrar, remover, listar e encerrar).
+3. Armazenar veículos cadastrados em uma lista.
+4. O programa de conter classe e métodos.
+5. Calcular valor total ao remover um veículo.
+6. Exibir mensagens apropriadas ao usuário.
+7. A saída deve exibir a placa do veículo removido e o valor a ser pago.
+8. Encerrar o sistema quando desejado.
 
 **📂 Especificações de Conteúdo**
-- **Classe abstrata:** `Smartphone`
-- **Propriedades:** 
-  - `numero` (pública)
-  - `modelo`, `imei`, `memoria` (privadas)
-- **Métodos:**
-  - `Ligar`()
-  - `ReceberLigacao`()
-  - `InstalarAplicativo()` (abstract)
+- Classe: `Estacionamento`
+- Propriedades:
+  - `precoInicial` (decimal)
+  - `precoPorHora` (decimal)
+  - `veiculos (lista de strings)`
+- Métodos:
+  - `AdicionarVeiculo()`
+  - `RemoverVeiculo()`
+  - `ListarVeiculos()`
 ```
-Smarthpone: `Ligar()`, `ReceberLigacao()` e `IntalarAplicativos` (abstract).
-Iphone: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
-Nokia: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
- ```  
+precoInicial: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+precoPorHora: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+veiculos: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
 
-**⚙️ Especificações Técnicas**
-- Mensagens apropriadas devem ser exibidas em cada ação.
-- Todos os dados são capturados pelo sistema.
-- Uso de propriedades públicas e privadas.
-- Implementar todo o código marcado com `// TODO`.  
+AdicionarVeiculo: Método responsável por receber uma placa digitada pelo usuário e guardar na variável veiculos.
+
+RemoverVeiculo: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: precoInicial * precoPorHora, exibindo para o usuário.
+
+ListarVeiculos: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+```
+
+** ⚙️ Especificações Técnicas**
+- Entrada de dados via console.
+- Exibir mensagens apropriadas a cada situação (você tem que interagir com o usuário).
+- O usuário tem a opção de não escolher nada e encerrrar o sistema.
+- Utilizar decimais e conversores nos itens.
+- Uso de `if / else`, `for`, `foreach` e `switch`.
+- Cálculo do valor total = `precoInicial + (precoPorHora * horas)`.
 
 ### 🚀 Passo a Passo
-1. Criar classe abstrata `Smartphone`.
-2. Implementar métodos básicos (`Ligar`, `ReceberLigacao`).
-3. Criar classes `Nokia` e `Iphone` herdando de `Smartphone`.
-4. Implementar `InstalarAplicativo()` para cada modelo.
-5. Testar as classes no `Program.cs`.  
+1. Criar classe Estacionamento com atributos e métodos.
+2. Criar menu interativo no console.
+3. Implementar lógica de cálculo e listagem.
+4. Testar interações no terminal.
 
 ### 📊 Modelo do Diagrama
-```
-Criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone.
-```
-<img width="400" align="center" src="./images/diagrama.png">
+A função do desenvolvedor é dar continuidade obedecendo as regras descritas acima, para que no final, se tenha um programa funcional, conforme o diagrama abaixo:
+<img width="400" src="./images/diagrama_classe_estacionamento.png">
 
-### 💻 Execução do Projeto
+### ⏩ Execução do Projeto
 1. Clone este repositório.
 2. No terminal, navegue até o diretório do projeto.
 3. Execute:
@@ -116,8 +126,8 @@ Criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe
 dotnet run
 ```
 
-### Créditos
-Este projeto foi desenvolvido como parte de avaliação de Desafio de Projeto do Decola Tech Avanade 2024, para avaliar o ensinado na bootcamp de POO da linguagem de programação `C#`.
+### 🔗 Créditos
+Este projeto foi desenvolvido como parte de avaliação de Desafio de Projeto do Decola Tech Avanade 2024, para avaliar o ensinado na bootcamp dos conhecimentos adquiridos no módulo de fundamentos da linguagem de programação `C#`.
 
 *Nota: Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia DIO ou Avanade ou suas empresas associadas.*
 

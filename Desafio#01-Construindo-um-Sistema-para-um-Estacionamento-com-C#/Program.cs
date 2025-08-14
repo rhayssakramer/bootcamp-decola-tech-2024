@@ -1,14 +1,51 @@
-﻿using DesafioPOO.Models;
+﻿using AppEstacionamento.Models;
 
-// TODO: Realizar os testes com as classes Nokia e Iphone
-Console.WriteLine("Smartphone Nokia:");
-Smartphone nokia = new Nokia(numero: "987654321", modelo: "Nokia 3310", imei: "0800987654321", memoria: 128);
-nokia.ReceberLigacao();
-nokia.InstalarAplicativo("WhatsApp");
+// Coloca o encoding para UTF8 para exibir acentuação
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+decimal precoInicial = 0;
+decimal precoHora = 0;
 
+Console.WriteLine("Sejam bem-vindos(as) ao Park Estacionamento!\n" + "Digite o preço inicial do estacionamento:");
+precoInicial = Convert.ToDecimal(Console.ReadLine());
 
-Console.WriteLine("Smartphone Iphone:");
-Smartphone iphone = new Iphone(numero: "123456789", modelo: "iPhone 13", imei: "0800123456789", 64);
-iphone.Ligar();
-iphone.InstalarAplicativo("Instagram");
+Console.WriteLine("Agora digite o preço por hora do estacionamento:");
+precoHora = Convert.ToDecimal(Console.ReadLine());
+
+// Instancia a classe Estacionamento, já com os valores obtidos anteriormente
+Estacionamento estac = new Estacionamento(precoInicial, precoHora);
+
+string opcao = string.Empty;
+bool exibirMenu = true;
+
+// Realiza o loop do menu
+while (exibirMenu)
+{
+    Console.Clear();
+    Console.WriteLine("Digite a sua opção:");
+    Console.WriteLine("1 - Cadastrar veículo");
+    Console.WriteLine("2 - Remover veículo");
+    Console.WriteLine("3 - Listar veículos");
+    Console.WriteLine("4 - Encerrar Menu");
+
+    switch (Console.ReadLine())
+    {
+        case "1":
+            estac.AdicionarVeiculo();
+            break;
+        case "2":
+            estac.RemoverVeiculo();
+            break;
+        case "3":
+            estac.ListarVeiculos();
+            break;
+        case "4":
+            exibirMenu = false;
+            break;
+        default:
+            Console.WriteLine("Opção inválida, digite uma opção válida!");
+            break;
+    }
+    Console.WriteLine("Pressione qualquer tecla para continuar...");
+    Console.ReadKey();
+}
