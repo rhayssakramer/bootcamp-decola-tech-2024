@@ -1,4 +1,6 @@
-# 🧡 Formação Azure Fundamentals
+<img src="./img/topo.png>
+
+# 🧡 Bootcamp Decola Tech 2024
 
   Este repositório corresponde ao compliado de conteúdos utilizados na [Bootcamp Decola Tech 2024](https://web.dio.me/track/decola-tech-avanade-net-developer). Aqui você irá encontrar meus desafios, projetos, recursos e links úteis utilizados para concluir a bootcamp.
 
