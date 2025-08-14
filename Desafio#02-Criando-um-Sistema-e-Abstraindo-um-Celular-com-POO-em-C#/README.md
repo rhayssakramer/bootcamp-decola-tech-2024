@@ -3,17 +3,17 @@
 Este repositório corresponde ao Desafio #02 da [Bootcamp Decola Tech 2024](https://web.dio.me/track/decola-tech-avanade-net-developer) para aplicar conhecimentos de **Programação Orientada a Objetos em** `C#`.
 O objetivo é criar um sistema de console em .NET 6.0 que modele diferentes tipos de celulares, utilizando herança, abstração e polimorfismo.
 
-### Índice
+## 📑 Índice
 - [Introdução]()
 - [Tecnologias Utilizadas]()
 - [Desafio de Projeto]()
 - [Objetivos]()
-  - [x] Pré-requisitos
-  - [x] Estrutura do Projeto
-  - [x] Regras e Validações  
-  - [x] Especificações de Conteúdo  
-  - [x] Especificações Técnicas  
-- [Passo a Passo]()
+  - [x] [Pré-requisitos]()
+  - [x] [Passo a Passo]()
+  - [x] [Estrutura do Projeto]()
+  - [x] [Regras e Validações]()
+  - [x] [Especificações de Conteúdo]()
+  - [x] [Especificações Técnicas]()
 - [Modelo do Diagrama]()
 - [Execução do Projeto]()
 - [Créditos]()
@@ -40,12 +40,19 @@ O objetivo é aplicar os conceitos de POO aprendidos no módulo:
 - Polimorfismo
 - Encapsulamento
 
-**📌 Pré-requisitos**
+#### 📌 Pré-requisitos
 1. Ter o [.NET 6.0](https://dotnet.microsoft.com/pt-br/download/dotnet/6.0) instalado.
 2. Ter o [Node.js](https://www.nodejs.tech/pt-br/download) instalado.
 3. Editor de código [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [VS Code](https://code.visualstudio.com/).
 
-**📂 Estrutura do Projeto**
+#### 🚀 Passo a Passo
+1. Criar classe abstrata `Smartphone`.
+2. Implementar métodos básicos (`Ligar`, `ReceberLigacao`).
+3. Criar classes `Nokia` e `Iphone` herdando de `Smartphone`.
+4. Implementar `InstalarAplicativo()` para cada modelo.
+5. Testar as classes no `Program.cs`.  
+
+#### 📂 Estrutura do Projeto**
 ```
 SistemaCelulares/
 │
@@ -62,7 +69,7 @@ SistemaCelulares/
 └── 📄 README.md
 ```  
 
-**📜 Regras e Validações**
+#### 📜 Regras e Validações
 1. `Smartphone` deve ser **abstrata** e não pode ser instanciada servindo apenas como modelo.
 ```
 Smartphone: `numero`  (string), `modelo`  (string), `imei` (string) e `memoria` (int). Sendo modelo, IMEI e memoria `privadas` e numero `pública`
@@ -74,7 +81,7 @@ Nokia: numero, modelo, imei e memoria com herança da classe smartphone.
 ```
 3. O método `InstalarAplicativo` deve ser sobrescrito nas classes filhas, pois ambos possuem diferentes maneiras de instalar um aplicativo.    
 
-**📂 Especificações de Conteúdo**
+#### 📂 Especificações de Conteúdo
 - **Classe abstrata:** `Smartphone`
 - **Propriedades:** 
   - `numero` (pública)
@@ -89,18 +96,11 @@ Iphone: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
 Nokia: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
  ```  
 
-**⚙️ Especificações Técnicas**
+#### ⚙️ Especificações Técnicas
 - Mensagens apropriadas devem ser exibidas em cada ação.
 - Todos os dados são capturados pelo sistema.
 - Uso de propriedades públicas e privadas.
 - Implementar todo o código marcado com `// TODO`.  
-
-### 🚀 Passo a Passo
-1. Criar classe abstrata `Smartphone`.
-2. Implementar métodos básicos (`Ligar`, `ReceberLigacao`).
-3. Criar classes `Nokia` e `Iphone` herdando de `Smartphone`.
-4. Implementar `InstalarAplicativo()` para cada modelo.
-5. Testar as classes no `Program.cs`.  
 
 ### 📊 Modelo do Diagrama
 ```
@@ -115,13 +115,17 @@ Criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe
 ```
 dotnet run
 ```
+## 🗒️ Recursos Adicionais
+- [Documentação de C#](https://learn.microsoft.com/pt-br/dotnet/csharp/)
+- [Documentação de .NET](https://learn.microsoft.com/pt-br/dotnet/)
+- [C# - Linguagem de Programação](https://dotnet.microsoft.com/pt-br/languages/csharp)
 
-### 🔗 Créditos
+## 🔗 Créditos
 Este projeto foi desenvolvido como parte de avaliação de Desafio de Projeto do Decola Tech Avanade 2024, para avaliar o ensinado na bootcamp de POO da linguagem de programação `C#`.
 
 *Nota: Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia DIO ou Avanade ou suas empresas associadas.*
 
-### 👩🏼‍💻 Autora:
+## 👩🏼‍💻 Autora:
 <table style="border=0">
   <tr>
     <td align="left">
