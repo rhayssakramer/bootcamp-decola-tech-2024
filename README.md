@@ -34,7 +34,7 @@ Veja os projetos e desafios que completei durante o bootcamp e a formação:
 Este guia serve como repositório de estudos, desafios e projetos da [Bootcamp Decola Tech 2024](https://web.dio.me/track/decola-tech-avanade-net-developer). Explore os recursos compartilhados necessários para atender às suas necessidades de C# e .NET.
 
 ## 🖋️ Créditos
-Este repositório foi desenvolvido como guia de estudos da Bootcamp Decola Tech 2024, para avaliar o ensinado na bootcamp sobre C# e .NET com finalidade de concorrer a vaga de Estágio.
+Este repositório foi desenvolvido como guia de estudos da [Bootcamp Decola Tech 2024](https://web.dio.me/track/decola-tech-avanade-net-developer), para avaliar o ensinado na bootcamp sobre C# e .NET com finalidade de concorrer a vaga de Estágio.
 
 *Nota: Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia DIO ou suas empresas associadas.*
 
