@@ -1,4 +1,4 @@
-<img src="./img/topo.png>
+<img src="./img/topo.png">
 
 # 🧡 Bootcamp Decola Tech 2024
 
