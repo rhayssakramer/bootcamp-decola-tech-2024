@@ -126,7 +126,7 @@ A função do desenvolvedor é dar continuidade obedecendo as regras descritas a
 ```
 dotnet run
 ```
-## Recursos Adicionais
+## 🗒️ Recursos Adicionais
 - [Documentação de C#](https://learn.microsoft.com/pt-br/dotnet/csharp/)
 - [Documentação de .NET](https://learn.microsoft.com/pt-br/dotnet/)
 - [C# - Linguagem de Programação](https://dotnet.microsoft.com/pt-br/languages/csharp)
