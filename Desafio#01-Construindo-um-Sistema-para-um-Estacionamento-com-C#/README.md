@@ -19,21 +19,21 @@ O objetivo é criar um sistema de console em .NET 6.0 que modele diferentes tipo
 - [Créditos]()
 - [Autora]()
 
-#### ▶️ Introdução
+### ▶️ Introdução
 O desafio consiste em criar um sistema de console utilizando .NET e C# para treinar os conhecimentos adquiridos no módulo de `POO`. Na proposta do desafio o desenvoledor é responsável por modelar um sistema que trabalha com celulares que represente um modelo abstrato de celular, com comportamentos específicos para Nokia e iPhone. Para isso, foi preciso fazer o modelo abstrato de celular, que disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
 
-#### 💻 Tecnologias Utilizadas
+### 💻 Tecnologias Utilizadas
 
 | Linguagens de Programação | Ferramentas e Tecnologias |
 | :-----------------: | :-----------------------: |
 | <img height="40" src="https://skillicons.dev/icons?i=cs"> <img height="40" src="https://skillicons.dev/icons?i=dotnet"> <img height="40" src="https://skillicons.dev/icons?i=nodejs"> | <img height="40" src="https://skillicons.dev/icons?i=vscode">
 
-#### 🎯 Desafio de Projeto
+### 🎯 Desafio de Projeto
 - Criar uma classe abstrata `Smartphone` com atributos e métodos básicos.
 - Criar duas classes filhas (`Nokia` e `Iphone`) que herdam da classe base.
 - Implementar métodos sobrescritos para instalação de aplicativos, respeitando as diferenças de cada marca.
 
-#### 🛠️ Objetivos
+### 🛠️ Objetivos
 O objetivo é aplicar os conceitos de POO aprendidos no módulo:
 - Abstração
 - Herança
@@ -95,20 +95,20 @@ Nokia: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
 - Uso de propriedades públicas e privadas.
 - Implementar todo o código marcado com `// TODO`.  
 
-#### 🚀 Passo a Passo
+### 🚀 Passo a Passo
 1. Criar classe abstrata `Smartphone`.
 2. Implementar métodos básicos (`Ligar`, `ReceberLigacao`).
 3. Criar classes `Nokia` e `Iphone` herdando de `Smartphone`.
 4. Implementar `InstalarAplicativo()` para cada modelo.
 5. Testar as classes no `Program.cs`.  
 
-#### 📊 Modelo do Diagrama
+### 📊 Modelo do Diagrama
 ```
 Criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone.
 ```
 <img width="400" align="center" src="./images/diagrama.png">
 
-#### 💻 Execução do Projeto
+### 💻 Execução do Projeto
 1. Clone este repositório.
 2. No terminal, navegue até o diretório do projeto.
 3. Execute:
