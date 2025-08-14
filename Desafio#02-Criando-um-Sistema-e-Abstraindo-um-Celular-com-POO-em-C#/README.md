@@ -53,7 +53,7 @@ O objetivo é aplicar os conceitos de POO aprendidos no módulo:
 4. Implementar `InstalarAplicativo()` para cada modelo.
 5. Testar as classes no `Program.cs`.  
 
-#### 📂 Estrutura do Projeto**
+#### 📂 Estrutura do Projeto
 ```
 SistemaCelulares/
 │
